@@ -1,4 +1,4 @@
-# Copyright (c) 2015 Ultimaker B.V.
+# Copyright (c) 2016 Ultimaker B.V.
 # Cura is released under the terms of the AGPLv3 or higher.
 
 from UM.Logger import Logger
@@ -100,7 +100,7 @@ class LayerPass(RenderPass):
         if new_max_layers > 0 and new_max_layers != self._old_max_layers:
             self._max_layers = new_max_layers
 
-            # The qt slider has a bit of weird behavior that if the maxvalue needs to be changed first
+            # The qt slider has a bit of weird behavior that the maxvalue needs to be changed first
             # if it's the largest value. If we don't do this, we can have a slider block outside of the
             # slider.
             if new_max_layers > self._current_layer_num:
